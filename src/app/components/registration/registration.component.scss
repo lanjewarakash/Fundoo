@@ -1,135 +1,134 @@
 * {
-    box-sizing: border-box;
-  }
-  
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  border: solid grey 0.1px;
+  border-radius: 10px;
+  width: 65%;
+  margin-left: 250px;
+  margin-top: 30px;
+  height: 560px;
+}
+
+#maindiv {
+  padding: 30px;
+  width: 500px;
+  height: 570px;
+}
+.flname {
+  display: flex;
+  gap: 20px;  
+}
+
+.email mat-form-field {
+  width: 98%;
+}
+.fname mat-form-field {
+  width: 105%;
+}
+.lname mat-form-field {
+  width: 105%;
+}
+.pword mat-form-field {
+  width: 105%;
+}
+.cpword mat-form-field {
+  width: 105%;
+}
+
+.pass {
+  display: flex;
+  gap:20px
+
+}
+
+.image {
+  width: 35%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  align-items: center;
+}
+
+.imginfo {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  margin-top: 300px;
+  width: 180px;
+  flex-wrap: wrap;
+}
+
+button {
+  padding: 10px 25px 10px 25px;
+  background-color: rgb(81, 81, 249);
+  color: white;
+  border: transparent;
+  border-radius: 5px;
+}
+
+#g {
+  color: rgb(81, 81, 249);
+  font-size: 25px;
+}
+#o {
+  color: red;
+  font-size: 25px;
+}
+#O {
+  color: orange;
+  font-size: 25px;
+}
+#g {
+  color: rgb(81, 81, 249);
+  font-size: 25px;
+}
+#l {
+  color: green;
+  font-size: 25px;
+}
+#e {
+  color: red;
+  font-size: 25px;
+}
+.info {
+  width: 98%;
+  display: flex;
+  justify-content: space-between;
+  font-size: medium;
+  margin-top: 5%;
+}
+
+@media screen and (max-width: 600px) {
+
   .container {
-    display: flex;
-    border: solid grey 0.1px;
-    border-radius: 10px;
-    width: 65%;
-    margin-left: 250px;
-    margin-top: 30px;
-    height: 560px;
+    width: 100%;
+    margin: 0%;
+    padding: 0%;
+    height: 680px;
   }
-  
   #maindiv {
-    padding: 30px;
-    width: 500px;
-    height: 570px;
+    height: 650px;
+    gap: 20px;
   }
-  .flname {
-    display: flex;
-    gap: 20px;  
-  }
-  
-  .email mat-form-field {
-    width: 98%;
-  }
-  .fname mat-form-field {
-    width: 105%;
-  }
-  .lname mat-form-field {
-    width: 105%;
-  }
-  .pword mat-form-field {
-    width: 105%;
-  }
-  .cpword mat-form-field {
-    width: 105%;
-  }
-  
-  .pass {
-    display: flex;
-    gap:20px
-  
-  }
-  
   .image {
-    width: 35%;
-    display: flex;
-    justify-content: center;
-    position: relative;
-    align-items: center;
+    display: none;
   }
+  .email {
+    width: 100%;
   
-  .imginfo {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    position: absolute;
-    margin-top: 300px;
-    width: 180px;
+  }
+
+  .flname {
     flex-wrap: wrap;
+    flex-direction: column;
   }
-  
-  button {
-    padding: 10px 25px 10px 25px;
-    background-color: rgb(81, 81, 249);
-    color: white;
-    border: transparent;
-    border-radius: 5px;
+  .pass {
+    width: 100%;
+    flex-wrap: wrap;
+    flex-direction: column;
   }
-  
-  #g {
-    color: rgb(81, 81, 249);
-    font-size: 25px;
-  }
-  #o {
-    color: red;
-    font-size: 25px;
-  }
-  #O {
-    color: orange;
-    font-size: 25px;
-  }
-  #g {
-    color: rgb(81, 81, 249);
-    font-size: 25px;
-  }
-  #l {
-    color: green;
-    font-size: 25px;
-  }
-  #e {
-    color: red;
-    font-size: 25px;
-  }
-  .info {
-    width: 98%;
-    display: flex;
-    justify-content: space-between;
-    font-size: medium;
-    margin-top: 5%;
-  }
-  
-  @media screen and (max-width: 600px) {
-  
-    .container {
-      width: 100%;
-      margin: 0%;
-      padding: 0%;
-      height: 680px;
-    }
-    #maindiv {
-      height: 650px;
-      gap: 20px;
-    }
-    .image {
-      display: none;
-    }
-    .email {
-      width: 100%;
-    
-    }
-  
-    .flname {
-      flex-wrap: wrap;
-      flex-direction: column;
-    }
-    .pass {
-      width: 100%;
-      flex-wrap: wrap;
-      flex-direction: column;
-    }
-  }
-  
+}
