@@ -13,12 +13,14 @@ import { RegistrationComponent } from './components/registration/registration.co
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SignInComponent } from './components/signin/signin.component';
+import { ForgotPasswordComponent } from './components/forgot-password/forgot-password.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     RegistrationComponent,
-    SignInComponent
+    SignInComponent,
+    ForgotPasswordComponent
   ],
   imports: [
     BrowserModule,
