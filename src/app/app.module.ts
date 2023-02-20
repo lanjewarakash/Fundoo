@@ -15,6 +15,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SignInComponent } from './components/signin/signin.component';
 import { ForgotPasswordComponent } from './components/forgot-password/forgot-password.component';
 import { ResetpasswordComponent } from './components/resetpassword/resetpassword.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { ResetpasswordComponent } from './components/resetpassword/resetpassword
     MatCheckboxModule, 
     MatButtonModule ,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
