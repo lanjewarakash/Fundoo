@@ -1,7 +1,7 @@
 import { HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { HttpService } from '../HttpService/http.service';
-import { IUserSignIn , IUserRegistration } from '../model/defineData';
+import { IUserSignIn, IUserRegistration, IUserForgotPassword, IUserResetPassword } from '../model/defineData';
 
 @Injectable({
   providedIn: 'root'
@@ -33,4 +33,29 @@ registration(reqData:IUserRegistration){
   return this.httpService.PostService('user/userSignUp',reqData,false,httpOption)
 
 }
+
+Forgotpassword(reqData:IUserForgotPassword){
+
+  let httpOption={
+    headers:new HttpHeaders({
+    'Content-type':'application/json',
+    Authourization:'token'
+  
+    })
+  }
+  return this.httpService.PostService('user/userSignUp',reqData,false,httpOption)
+
+}
+resetpassword(reqData:IUserResetPassword){
+
+  let httpOption={
+    headers:new HttpHeaders({
+    'Content-type':'application/json',
+    Authourization:'token'
+  
+    })
+  }
+  return this.httpService.PostService('user/reset-password',reqData,false,httpOption)
+
+} 
 }
