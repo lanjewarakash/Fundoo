@@ -1,0 +1,63 @@
+.a {
+  display: flex;
+  margin-left: 20%;
+  margin-top: 35px;
+}
+.container {
+  width: 550px;
+
+  height: fit-content;
+  border: 1px solid rgb(201, 197, 197);
+  padding: 9px;
+  margin-left: 40px;
+  border-radius: 10px;
+  box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.302),
+    0 2px 6px 2px rgba(60, 64, 67, 0.149);
+}
+.subcontainer {
+  width: 100%;
+}
+.outerlogo {
+  float: right;
+}
+
+input {
+  width: 100%;
+  height: 50px;
+  outline: none;
+  border: none;
+}
+button {
+  width: 10%;
+  margin-left: 90%;
+  background-color: white;
+  outline: none;
+  border: none;
+  font-size: medium;
+  font-weight: 500;
+}
+
+.material-symbols-outlined {
+  padding-left: 10px;
+}
+.upIcon {
+  padding-left: 20px;
+}
+
+#title {
+  width: 90%;
+}
+.lowerbutton {
+  display: flex;
+  justify-content: space-between;
+  width: 490px;
+}
+.lowerIcon span {
+  padding-right: 30px;
+}
+
+@media only screen and (min-width: 600px) {
+  .container {
+    margin-left: 0%;
+  }
+}

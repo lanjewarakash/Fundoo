@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http'
+import { CreateNote, IUserForgotPassword, IUserRegistration, IUserResetPassword, IUserSignIn } from '../model/defineData';
 
 @Injectable({
   providedIn: 'root'
@@ -10,23 +11,22 @@ export class HttpService {
 
   BaseUrl = 'http://fundoonotes.incubation.bridgelabz.com/api/';
 
-  PostService(url:string, reqData:any , token:boolean,httpOption:any){
-    return this.httpClient.post(this.BaseUrl + url, reqData, token && httpOption);
+  PostService(url: string, reqData: IUserSignIn | IUserRegistration | IUserResetPassword | IUserForgotPassword | CreateNote, token: boolean=false, httpOption: any) {
+    return this.httpClient.post(this.BaseUrl + url,reqData,token && httpOption
+    );
+  }
+
+  GetService(url: string,  token: boolean=true, httpOption: any) {
+    return this.httpClient.get (this.BaseUrl + url, token && httpOption );
+  }
+
+  PutService(url: string, reqData: any, token: boolean, httpOption: any) {
+    return this.httpClient.put ( this.BaseUrl + url,reqData);
 
   }
 
-  GetService(url:string, reqData:any , token:boolean,httpOption:any){
-    return this.httpClient.post(this.BaseUrl + url, reqData, token && httpOption);
-
-  }
-
-  PutService(url:string, reqData:any , token:boolean,httpOption:any){
-    return this.httpClient.post(this.BaseUrl + url, reqData, token && httpOption);
-
-  }
-
-  DeleteService(url:string, reqData:any , token:boolean,httpOption:any){
-    return this.httpClient.post(this.BaseUrl + url, reqData, token && httpOption);
+  DeleteService(url: string, reqData: any, token: boolean, httpOption: any) {
+    return this.httpClient.delete (this.BaseUrl + url,reqData );
 
   }
 }
