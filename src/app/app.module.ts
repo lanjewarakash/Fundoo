@@ -5,6 +5,11 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatButtonModule} from '@angular/material/button';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatListModule} from '@angular/material/list';
+import {MatIconModule} from '@angular/material/icon';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -16,6 +21,11 @@ import { SignInComponent } from './components/signin/signin.component';
 import { ForgotPasswordComponent } from './components/forgot-password/forgot-password.component';
 import { ResetpasswordComponent } from './components/resetpassword/resetpassword.component';
 import { HttpClientModule } from '@angular/common/http';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { CreateNoteComponent } from './components/create-note/create-note.component';
+import { DisplayNoteComponent } from './components/display-note/display-note.component';
+import { GetAllNoteComponent } from './components/get-all-note/get-all-note.component';
+import { IconComponent } from './components/icon/icon.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +33,12 @@ import { HttpClientModule } from '@angular/common/http';
     RegistrationComponent,
     SignInComponent,
     ForgotPasswordComponent,
-    ResetpasswordComponent
+    ResetpasswordComponent,
+    DashboardComponent,
+    CreateNoteComponent,
+    DisplayNoteComponent,
+    GetAllNoteComponent,
+    IconComponent
   ],
   imports: [
     BrowserModule,
@@ -33,9 +48,14 @@ import { HttpClientModule } from '@angular/common/http';
     MatInputModule,
     MatCheckboxModule, 
     MatButtonModule ,
-    FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    FormsModule,
+    HttpClientModule,
+    MatSnackBarModule,
+    MatSidenavModule,
+    MatToolbarModule,
+    MatListModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]
