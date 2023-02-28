@@ -27,6 +27,7 @@ export class SignInComponent implements OnInit {
       };
       this.userService.signin(data).subscribe((response: any ) => {
         console.log('signed Is  SuccessFull', response)
+        localStorage.setItem("token", response.id)
       })
     }
   }
