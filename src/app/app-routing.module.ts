@@ -18,14 +18,11 @@ const routes: Routes = [
   {path: 'createnote', component:CreateNoteComponent},
   {path: 'home', component:DashboardComponent,
 
-  children:[{path: 'notes',component:GetAllNoteComponent,
-  children:[{path : 'display', component:DisplayNoteComponent
-  }]
-}
-  ]
-}
+  children:[{path: 'notes',component:GetAllNoteComponent},
+  {path : 'display', component:DisplayNoteComponent},
+]}
+]
 
-];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

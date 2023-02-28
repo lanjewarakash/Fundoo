@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { HttpService } from '../HttpService/http.service';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class NoteService {
   token:any;
