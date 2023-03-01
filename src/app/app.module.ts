@@ -10,6 +10,8 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatListModule} from '@angular/material/list';
 import {MatIconModule} from '@angular/material/icon';
+import {MatMenuModule} from '@angular/material/menu';
+
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -55,7 +57,9 @@ import { IconComponent } from './components/icon/icon.component';
     MatSidenavModule,
     MatToolbarModule,
     MatListModule,
-    MatIconModule
+    MatIconModule,
+    MatMenuModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

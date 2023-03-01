@@ -17,7 +17,15 @@
     <img src="../../../assets/archive.svg" alt="" />
   </div>
   <div>
-    <img src="../../../assets/more.svg" alt="" />
+    <img [matMenuTriggerFor]="menu" src="../../../assets/more.svg" alt="" />
+<mat-menu #menu="matMenu">
+  <button mat-menu-item>Delete note</button>
+  <button mat-menu-item>Add label</button>
+  <button mat-menu-item>Add drawing</button>
+  <button mat-menu-item>Make a copy</button>
+  <button mat-menu-item>Show tick boxes</button>
+  <button mat-menu-item>Copy to Google docs</button>
+</mat-menu>
   </div>
 </div>
 <div></div>
