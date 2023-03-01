@@ -19,8 +19,6 @@ export class NoteService {
       headers:new HttpHeaders({
       'Content-type':'application/json',
        'Authorization':this.token
-
-    
       })
     }
     return this.httpService.PostService('notes/addNotes',data, true,httpOption)
@@ -40,4 +38,39 @@ export class NoteService {
     return this.httpService.GetService('notes/getNotesList', true,httpOption)
 
   } 
+  trashNoteService(data: any) {
+    console.log(this.token);
+
+    let httpOption = {
+      headers: new HttpHeaders({
+        'Content-type': 'application/json',
+        Authorization: this.token,
+      }),
+    };
+    return this.httpService.PostService(
+      'notes/trashNotes',
+      data,
+      true,
+      httpOption
+    );
+  }
+  trashNoteListService() {
+    console.log(this.token);
+
+    let httpOption = {
+      headers: new HttpHeaders({
+        'Content-type': 'application/json',
+        Authorization: this.token,
+      }),
+    };
+    return this.httpService.GetService(
+      'notes/getTrashNotesList',
+      true,
+      httpOption
+    );
+  }
+
+
+
+
 }

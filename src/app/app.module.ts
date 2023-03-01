@@ -28,6 +28,7 @@ import { CreateNoteComponent } from './components/create-note/create-note.compon
 import { DisplayNoteComponent } from './components/display-note/display-note.component';
 import { GetAllNoteComponent } from './components/get-all-note/get-all-note.component';
 import { IconComponent } from './components/icon/icon.component';
+import { TrashNoteComponent } from './components/trash-note/trash-note.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { IconComponent } from './components/icon/icon.component';
     CreateNoteComponent,
     DisplayNoteComponent,
     GetAllNoteComponent,
-    IconComponent
+    IconComponent,
+    TrashNoteComponent
   ],
   imports: [
     BrowserModule,

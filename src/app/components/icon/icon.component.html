@@ -19,7 +19,7 @@
   <div>
     <img [matMenuTriggerFor]="menu" src="../../../assets/more.svg" alt="" />
 <mat-menu #menu="matMenu">
-  <button mat-menu-item>Delete note</button>
+  <button mat-menu-item (click)="trashNote()">Delete note</button>
   <button mat-menu-item>Add label</button>
   <button mat-menu-item>Add drawing</button>
   <button mat-menu-item>Make a copy</button>
