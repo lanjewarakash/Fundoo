@@ -6,38 +6,37 @@ import { HttpService } from '../HttpService/http.service';
   providedIn: 'root',
 })
 export class NoteService {
-  token:any;
+  token: any;
 
-  constructor( private httpService : HttpService) { 
-  this.token = localStorage.getItem('token');
-
+  constructor(private httpService: HttpService) {
+    this.token = localStorage.getItem('token');
   }
-  createNote(data:any){
-    console.log(this.token)
+  createNote(data: any) {
+    console.log(this.token);
 
-    let httpOption={
-      headers:new HttpHeaders({
-      'Content-type':'application/json',
-       'Authorization':this.token
-      })
-    }
-    return this.httpService.PostService('notes/addNotes',data, true,httpOption)
+    let httpOption = {
+      headers: new HttpHeaders({
+        'Content-type': 'application/json',
+        Authorization: this.token,
+      }),
+    };
+    return this.httpService.PostService(
+      'notes/addNotes',
+      data,
+      true,
+      httpOption
+    );
+  }
 
-  } 
-
-
-  getAllNote(){
-
-    let httpOption={
-      headers:new HttpHeaders({
-      'Content-type':'application/json',
-      'Authorization':this.token
-    
-      })
-    }
-    return this.httpService.GetService('notes/getNotesList', true,httpOption)
-
-  } 
+  getAllNote() {
+    let httpOption = {
+      headers: new HttpHeaders({
+        'Content-type': 'application/json',
+        Authorization: this.token,
+      }),
+    };
+    return this.httpService.GetService('notes/getNotesList', true, httpOption);
+  }
   trashNoteService(data: any) {
     console.log(this.token);
 
@@ -70,7 +69,35 @@ export class NoteService {
     );
   }
 
+  ArchiveNoteService(data: any) {
+    console.log(this.token);
 
+    let httpOption = {
+      headers: new HttpHeaders({
+        'Content-type': 'application/json',
+        Authorization: this.token,
+      }),
+    };
+    return this.httpService.PostService(
+      'notes/archiveNotes',
+      data,
+      true,
+      httpOption
+    );
+  }
+  ArchiveNoteListService() {
+    console.log(this.token);
 
-
+    let httpOption = {
+      headers: new HttpHeaders({
+        'Content-type': 'application/json',
+        Authorization: this.token,
+      }),
+    };
+    return this.httpService.GetService(
+      'notes/getArchiveNotesList',
+      true,
+      httpOption
+    );
+  }
 }
