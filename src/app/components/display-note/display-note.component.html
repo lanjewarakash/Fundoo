@@ -1,11 +1,35 @@
 <div class="a">
-    <div class="container" *ngFor="let note of childArray">
-      <div class="content1" >{{ note.title }}</div>
-      <img src="../../" alt="" />
-      <div class="content2">{{ note.description }} </div>
+  <div
+    class="container"
+    *ngFor="let note of childArray"
+    [style.background-color]="note.color"
+  >
+    <div class="contentbox">
+      <div>
+        <div class="content1" (click)="updateNote(note)">{{ note.title }}</div>
+        <div class="content2" (click)="updateNote(note)">{{ note.description }}</div>
+      </div>
+      <div>
+        <img
+          class="icon"
+          src="../../../assets/pin.svg"
+          alt=""
+          width="20px"
+          height="20px"
+        />
+      </div>
+    </div>
+
+    <div id="datepicker">
+      {{ note.reminder | date : "medium" }}
+    </div>
+
     <div class="icon">
-      <app-icon [isIcon]="note"> </app-icon>
-    </div> 
+      <app-icon
+        [isIcon]="note"
+        (messageTrashToDisplay)="receivemessageTrashToDisplay($event)"
+      >
+      </app-icon>
+    </div>
   </div>
-  </div>
-  
+</div>

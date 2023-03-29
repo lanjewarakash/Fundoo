@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { UserService } from 'src/app/service/UserService/user.service';
+import { UserService } from 'src/app/services/userService/user.service';
 
 @Component({
   selector: 'app-resetpassword',
@@ -33,3 +33,5 @@ export class ResetpasswordComponent implements OnInit {
       }
     }
   }
+  
+

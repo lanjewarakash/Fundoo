@@ -19,30 +19,15 @@
 }
 .flname {
   display: flex;
-  justify-content: space-between;
-  
+  justify-content: space-between; 
 }
 
 .email mat-form-field {
   width: 100%;
 }
-.fname mat-form-field {
-  width: 105%;
-}
-.lname mat-form-field {
-  width: 105%;
-}
-.pword mat-form-field {
-  width: 105%;
-}
-.cpword mat-form-field {
-  width: 105%;
-}
-
 .pass {
   display: flex;
   justify-content: space-between;
-
 }
 
 .image {
@@ -66,8 +51,8 @@
 }
 #anchor {
   text-decoration: none;
-   margin-left: 20px;
-   color: blue;
+  margin-left: 20px;
+  color: blue;
 }
 
 button {
@@ -111,7 +96,6 @@ button {
 }
 
 @media screen and (max-width: 600px) {
-
   .container {
     width: 100%;
     margin: 0%;
@@ -121,15 +105,12 @@ button {
   #maindiv {
     height: 650px;
     gap: 20px;
-  
-    
   }
   .image {
     display: none;
   }
   .email {
     width: 100%;
-  
   }
 
   .flname {

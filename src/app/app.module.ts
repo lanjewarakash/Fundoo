@@ -11,40 +11,58 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatListModule} from '@angular/material/list';
 import {MatIconModule} from '@angular/material/icon';
 import {MatMenuModule} from '@angular/material/menu';
+import {MatDialogModule} from '@angular/material/dialog';
+import { AuthguardService } from './services/authguardService/authguard.service';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MatNativeDateModule} from '@angular/material/core';
+import { MatMomentDateModule } from "@angular/material-moment-adapter";
+
+
+
+
+
+
 
 
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { RegistrationComponent } from './components/registration/registration.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { SignInComponent } from './components/signin/signin.component';
-import { ForgotPasswordComponent } from './components/forgot-password/forgot-password.component';
+import { RegistrationComponent } from './components/registration/registration.component';
+import { SignInComponent } from './components/sign-in/sign-in.component';
+import { ForgotpasswordComponent } from './components/forgotpassword/forgotpassword.component';
 import { ResetpasswordComponent } from './components/resetpassword/resetpassword.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { CreateNoteComponent } from './components/create-note/create-note.component';
 import { DisplayNoteComponent } from './components/display-note/display-note.component';
 import { GetAllNoteComponent } from './components/get-all-note/get-all-note.component';
 import { IconComponent } from './components/icon/icon.component';
-import { TrashNoteComponent } from './components/trash-note/trash-note.component';
-import { ArchiveNoteComponent } from './components/archive-note/archive-note.component';
+import { BinComponent } from './components/bin/bin.component';
+import { ArchiveComponent } from './components/archive/archive.component';
+import { UpdateNoteComponent } from './components/update-note/update-note.component';
+import { ReminderComponent } from './components/reminder/reminder.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     RegistrationComponent,
     SignInComponent,
-    ForgotPasswordComponent,
+    ForgotpasswordComponent,
     ResetpasswordComponent,
     DashboardComponent,
     CreateNoteComponent,
     DisplayNoteComponent,
     GetAllNoteComponent,
     IconComponent,
-    TrashNoteComponent,
-    ArchiveNoteComponent
+    BinComponent,
+    ArchiveComponent,
+    UpdateNoteComponent,
+    ReminderComponent,
+  
+
+
   ],
   imports: [
     BrowserModule,
@@ -62,10 +80,19 @@ import { ArchiveNoteComponent } from './components/archive-note/archive-note.com
     MatToolbarModule,
     MatListModule,
     MatIconModule,
-    MatMenuModule
+    MatMenuModule,
+    MatDialogModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatMomentDateModule
     
+
+    
+
   ],
-  providers: [],
+  providers: [
+    AuthguardService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
